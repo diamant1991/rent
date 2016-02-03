@@ -28,3 +28,16 @@ $(document).mouseup(function (e) {
         $('.slct').removeClass('active');
     }
 });
+
+$('.hidden-filter').click(function(e) {
+	e.preventDefault();
+	var filter = $('#filter');
+	if(filter.is(':visible')){
+		filter.slideUp(350);
+		$(this).text('Развернуть фильтр')
+	}
+	else{
+		filter.slideDown(350);
+		$(this).text('Скрыть фильтр')
+	}
+});
