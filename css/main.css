@@ -75,7 +75,7 @@ img {
 .top-item-inner:hover {
   background-color: #eff2f5;
 }
-.top-item-inner .label {
+.label-number {
   display: inline-block;
   vertical-align: middle;
   font-size: 10px;
@@ -170,20 +170,22 @@ img {
 }
 .filter-item {
   margin-bottom: 10px;
+  padding-left: 110px;
+  position: relative;
 }
 .filter-item:last-child {
   margin-bottom: 25px;
 }
 .filter-name {
   width: 110px;
-  float: left;
+  position: absolute;
+  top: 4px;
+  left: 0;
+  z-index: 2;
   text-align: right;
   font-size: 14px;
-  padding-top: 4px;
 }
 .filter-tag {
-  float: left;
-  width: 890px;
   padding-left: 15px;
 }
 .filter-tag a {
@@ -207,10 +209,16 @@ img {
 }
 .hidden-filter {
   display: inline-block;
+  position: relative;
   font-size: 13px;
   color: #a0b2c3;
-  position: relative;
-  top: 10px;
+}
+.hidden-filter.active:after {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
 }
 .hidden-filter:after {
   position: absolute;
@@ -221,6 +229,15 @@ img {
   z-index: 2;
   right: -15px;
   top: 4px;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
   background: url(../images/hidden-arrow.png) no-repeat;
 }
 .reset-btn {
@@ -234,6 +251,8 @@ img {
   background: #d9dee3;
   font-size: 16px;
   color: #42698c;
+  position: relative;
+  top: -7px;
 }
 .breadcrumb {
   font-size: 13px;
@@ -290,6 +309,11 @@ img {
 }
 .sorting {
   font-size: 14px;
+}
+.sorting .left-sort,
+.sorting .right-sort {
+  display: inline-block;
+  vertical-align: middle;
 }
 .sorting span {
   display: inline-block;
@@ -433,6 +457,11 @@ img {
 }
 .object-img {
   position: relative;
+  height: 175px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  -o-background-size: cover;
+  background-size: cover;
 }
 .object-desc {
   height: 140px;
@@ -1176,4 +1205,196 @@ img {
 }
 .big-map {
   margin: 20px 0;
+}
+.modal-open {
+  overflow: hidden;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+.modal.fade .modal-dialog {
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  -moz-transition: transform 0.3s ease-out, -moz-transform 0.3s ease-out;
+  -o-transition: transform 0.3s ease-out, -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out, -moz-transform 0.3s ease-out, -o-transform 0.3s ease-out;
+  -webkit-transform: translate(0, -25%);
+  -moz-transform: translate(0, -25%);
+  -ms-transform: translate(0, -25%);
+  -o-transform: translate(0, -25%);
+  transform: translate(0, -25%);
+}
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  -o-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #999;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  outline: 0;
+  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000;
+}
+.modal-backdrop.fade {
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+.modal-backdrop.in {
+  filter: alpha(opacity=50);
+  opacity: .5;
+}
+.modal-header {
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.modal-header .close {
+  margin-top: -2px;
+}
+.modal-title {
+  margin: 0;
+  line-height: 1.42857143;
+}
+.modal-body {
+  position: relative;
+  padding: 15px;
+}
+.modal-footer {
+  padding: 15px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+}
+.modal-footer .btn + .btn {
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+.modal-footer .btn-group .btn + .btn {
+  margin-left: -1px;
+}
+.modal-footer .btn-block + .btn-block {
+  margin-left: 0;
+}
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+.tablet-btn {
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  background: transparent;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 50%;
+  margin-top: -11.5px;
+}
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  background: rgba(66, 105, 140, 0.9);
+  overflow: hidden;
+  display: none;
+}
+.mobile-nav-wrapp {
+  width: 360px;
+  height: 100%;
+  background: #fff;
+  position: relative;
+  padding: 35px;
+  left: -405px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.mobile-nav-wrapp.active {
+  left: 0;
+  -webkit-transition-delay: 0.45s;
+  -moz-transition-delay: 0.45s;
+  -o-transition-delay: 0.45s;
+  transition-delay: 0.45s;
+}
+.mobile-nav-wrapp .close-menu {
+  position: absolute;
+  top: 15px;
+  right: -45px;
+  z-index: 2;
+}
+.mobile-nav-wrapp li {
+  position: relative;
+  padding-left: 45px;
+  height: 40px;
+}
+.mobile-nav-wrapp li img {
+  position: absolute;
+  left: 0;
+  top: -2px;
+  z-index: 2;
+}
+.mobile-nav-wrapp a {
+  color: #42698c;
+  font-size: 14px;
+  display: inline-block;
+  vertical-align: top;
+}
+.mobile-nav-wrapp a:hover {
+  text-decoration: underline;
+}
+.mobile-btn {
+  background: transparent;
+  outline: 0;
+  border: 0;
+  float: right;
+  cursor: pointer;
+  position: relative;
+  top: 8px;
+}
+.tablet {
+  padding-top: 30px;
 }

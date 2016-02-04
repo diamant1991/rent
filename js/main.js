@@ -34,10 +34,42 @@ $('.hidden-filter').click(function(e) {
 	var filter = $('#filter');
 	if(filter.is(':visible')){
 		filter.slideUp(350);
-		$(this).text('Развернуть фильтр')
+		$(this).text('Развернуть фильтр');
+		$(this).closest('.filter').find('.reset-btn').hide();
+		$(this).removeClass('active');
 	}
 	else{
 		filter.slideDown(350);
-		$(this).text('Скрыть фильтр')
+		$(this).text('Скрыть фильтр');
+		$(this).closest('.filter').find('.reset-btn').show();
+		$(this).addClass('active');
 	}
+});
+
+$('.more-text').click(function(e) {
+	e.preventDefault();
+	var heightBlock = $('.seo-tex-inner').innerHeight() + 50;
+	$('.seo-text').animate({height: heightBlock + 'px'}, 400);
+	$(this).closest('.more-text-block').hide();
+});
+
+$(function() {
+	var menu = $('.mobile-nav'),
+			menuWrapp = $('.mobile-nav-wrapp'),
+			closeMenu = $('.close-menu'),
+			menuBtn = $('.tablet-btn');
+
+	menuBtn.click(function(e) {
+		e.preventDefault();
+		menu.fadeIn(500);
+		menuWrapp.addClass('active');
+	});
+
+	closeMenu.click(function(e) {
+		e.preventDefault();
+		if (menu.is(':visible')) {
+			menuWrapp.removeClass('active');
+			menu.delay(300).fadeOut(500);
+		}
+	});
 });
