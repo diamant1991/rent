@@ -57,7 +57,8 @@ $(function() {
 	var menu = $('.mobile-nav'),
 			menuWrapp = $('.mobile-nav-wrapp'),
 			closeMenu = $('.close-menu'),
-			menuBtn = $('.tablet-btn');
+			menuBtn = $('.tablet-btn'),
+			mobileBtn = $('.mobile-btn');
 
 	menuBtn.click(function(e) {
 		e.preventDefault();
@@ -72,4 +73,19 @@ $(function() {
 			menu.delay(300).fadeOut(500);
 		}
 	});
+
+	mobileBtn.click(function(e) {
+		e.preventDefault();
+		if (menu.is(':hidden')) {
+			menu.fadeIn(500);
+			menuWrapp.addClass('active');
+			$(this).addClass('active');
+		}
+		else{
+			menuWrapp.removeClass('active');
+			menu.delay(300).fadeOut(500);
+			$(this).removeClass('active');
+		}
+	});
+	
 });

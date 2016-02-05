@@ -109,7 +109,7 @@
 					<div class="table-block">
 						<div class="block-vertical">
 							<div class="tel">+7 903 192 09 89</div>
-							<a href="#" class="get-order-link">Оставить заявку</a>
+							<a href="#" class="get-order-link" data-toggle="modal" data-target="#modal-1">Оставить заявку</a>
 						</div>
 					</div>
 				</div>
@@ -126,7 +126,15 @@
 			<a href="#" class="close-menu">
 				<img src="images/close-menu.png" height="25" width="27" alt="">
 			</a>
+			<div class="telephone-nav">
+				<div class="tel">+7 903 192 09 89</div>
+				<a href="#" class="get-order-link">Оставить заявку</a>
+			</div>
 			<ul>
+				<li class="geo">
+					<img src="images/gps.png" height="23" width="17" alt="">
+					<a href="#">Санкт-Петербург</a>
+				</li>
 				<li>
 					<img src="images/star.png" height="23" width="24" alt="">
 					<a href="#">Избранное</a>
@@ -136,6 +144,10 @@
 					<img src="images/compare.png" height="16" width="31" alt="">
 					<a href="#">К сравнению</a>
 					<span class="label-number">5</span>
+				</li>
+				<li class="enter">
+					<img src="images/enter.png" height="23" width="16" alt="">
+					<a href="#">Вход</a>
 				</li>
 				<li>
 					<img src="images/sklad.png" height="19" width="19" alt="">
@@ -152,6 +164,7 @@
 			</ul>
 		</div>
 	</div>
+	<!-- mobile nav -->
 
 	<nav class="nav">
 		<div class="container clearfix">
@@ -198,89 +211,141 @@
 	<section class="filter">
 		<div class="container">
 			<div id="filter">
-				<div class="filter-item clearfix">
-					<div class="filter-name">
-						Тип сделки:
+				<div class="desktop-filter">
+					<div class="filter-item clearfix">
+						<div class="filter-name">
+							Тип сделки:
+						</div>
+						<div class="filter-tag">
+							<a href="#">Продажа</a>
+							<a href="#">Аренда</a>
+							<a href="#" class="active">Все</a>
+						</div>
 					</div>
-					<div class="filter-tag">
-						<a href="#">Продажа</a>
-						<a href="#">Аренда</a>
-						<a href="#" class="active">Все</a>
+					<div class="filter-item clearfix">
+						<div class="filter-name">
+							Тип обьекта:
+						</div>
+						<div class="filter-tag">
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#" class="active">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+						</div>
+					</div>
+					<div class="filter-item clearfix">
+						<div class="filter-name">
+							Направление:
+						</div>
+						<div class="filter-tag">
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#" class="active">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+						</div>
+					</div>
+					<div class="filter-item clearfix">
+						<div class="filter-name">
+							Населеный пункт:
+						</div>
+						<div class="filter-tag">
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#" class="active">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+							<a href="#">Вариант</a>
+						</div>
 					</div>
 				</div>
-				<div class="filter-item clearfix">
-					<div class="filter-name">
-						Тип обьекта:
+				<div class="mobile-filter">
+					<div class="mobile-filter-item">
+						<div class="select">
+							<a href="javascript:void(0);" class="slct">Тип сделки</a>
+							<ul class="drop">
+								<li>Select 1</li>
+								<li>Select 2</li>
+								<li>Select 3</li>
+								<li>Select 4</li>
+							</ul>
+							<input type="hidden" id="select">
+						</div>
 					</div>
-					<div class="filter-tag">
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#" class="active">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
+					<div class="mobile-filter-item">
+						<div class="select">
+							<a href="javascript:void(0);" class="slct">Тип обьекта</a>
+							<ul class="drop">
+								<li>Select 1</li>
+								<li>Select 2</li>
+								<li>Select 3</li>
+								<li>Select 4</li>
+							</ul>
+							<input type="hidden" id="select2">
+						</div>
 					</div>
-				</div>
-				<div class="filter-item clearfix">
-					<div class="filter-name">
-						Направление:
+					<div class="mobile-filter-item">
+						<div class="select">
+							<a href="javascript:void(0);" class="slct">Направление</a>
+							<ul class="drop">
+								<li>Select 1</li>
+								<li>Select 2</li>
+								<li>Select 3</li>
+								<li>Select 4</li>
+							</ul>
+							<input type="hidden" id="select3">
+						</div>
 					</div>
-					<div class="filter-tag">
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#" class="active">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-					</div>
-				</div>
-				<div class="filter-item clearfix">
-					<div class="filter-name">
-						Населеный пункт:
-					</div>
-					<div class="filter-tag">
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#" class="active">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
-						<a href="#">Вариант</a>
+					<div class="mobile-filter-item">
+						<div class="select">
+							<a href="javascript:void(0);" class="slct">Населенный пункт</a>
+							<ul class="drop">
+								<li>Select 1</li>
+								<li>Select 2</li>
+								<li>Select 3</li>
+								<li>Select 4</li>
+							</ul>
+							<input type="hidden" id="select4">
+						</div>
 					</div>
 				</div>
 			</div>
@@ -331,7 +396,9 @@
 				</div>
 			</div>
 			<div class="result-filter">
-				<a href="#" class="active">ЖД ветка примыкает к зданию</a>
+				<a href="#" class="active">
+					<span>ЖД ветка примыкает к зданию</span>
+				</a>
 				<a href="#">ЖД ветка примыкает к зданию</a>
 				<a href="#">ЖД ветка примыкает к зданию</a>
 			</div>
@@ -876,6 +943,41 @@
 		</div>
 	</footer>
 
+	<div class="modal fade" id="modal-1" tabindex="-1" role="dialog">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	        	<img src="images/close-menu.png" height="25" width="27" alt="">
+	        </button>
+	        <h4 class="modal-title">Заявка на подбор помещений</h4>
+	      </div>
+	      <div class="modal-body">
+	        <form action="">
+	        	<div class="modal-input-block">
+	        		<input type="text" placeholder="Ваше имя">
+	        	</div>
+	        	<div class="modal-input-block">
+	        		<input type="text" placeholder="E-mail">
+	        	</div>
+	        	<div class="modal-input-block">
+	        		<input type="text" placeholder="Телефон">
+	        	</div>
+	        	<div class="modal-input-block">
+	        		<input type="text" placeholder="Компания">
+	        	</div>
+	        	<div class="modal-input-block">
+	        		<textarea placeholder="Комментарий"></textarea>
+	        	</div>
+	        	<div class="modal-input-block clearfix">
+	        		<input type="submit" value="Оставить заявку" class="modal-submit">
+	        	</div>
+	        </form>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
 	<script src="js/vendor.min.js"></script>
 	<script>
 		$(document).ready(function() {
@@ -887,7 +989,7 @@
     itemsDesktop : [1040,4],
     itemsDesktopSmall : [900,3], 
     itemsTablet: [600,2],
-    itemsMobile : false
+    itemsMobile : [400,1]
 		  });
 			 
 		  $(".next").click(function(){
