@@ -338,4 +338,28 @@
 	.more-text-block:before{
 		top: -50px;
 	}
+	.modal .close{
+		display: none;
+	}
+	.modal-dialog{
+		width: 315px;
+	}
+	.modal-input-block input[type="text"].name-input {
+    background-position: 31% 8px;
+	}
+	.modal-input-block input[type="text"].email-input {
+    background-position: 22% 8px;
+	}
+	.modal-input-block input[type="text"].tel-input {
+    background-position: 28% 8px;
+	}
+	.modal-input-block input[type="text"].my-email {
+	  background-position: 34% 8px;
+	}
+	.modal-input-block input[type="text"].your-email {
+    background-position: 52% 8px;
+	}
+	.modal-input-block textarea.main-text {
+    background-position: 41% 9px;
+	}
 }

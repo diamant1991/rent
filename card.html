@@ -109,7 +109,7 @@
 					<div class="table-block">
 						<div class="block-vertical">
 							<div class="tel">+7 903 192 09 89</div>
-							<a href="#" class="get-order-link">Оставить заявку</a>
+							<a href="#" class="get-order-link" data-toggle="modal" data-target="#modal-1">Оставить заявку</a>
 						</div>
 					</div>
 				</div>
@@ -181,7 +181,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="#" class="add-object-link" data-toggle="modal" data-target="#modal-2">
 							<div class="table-block">
 								<div class="block-vertical"><img src="images/plus.png" height="16" width="16" alt="">
 									Добавить обьект</div>
@@ -414,7 +414,7 @@
 							<div class="text">
 								ОПЕКС <span class="ques">?</span>включен в стоимость НДС оплачивается отдельно
 							</div>
-							<a href="#" class="get-order">Оставить заявку</a>
+							<a href="#" class="get-order" data-toggle="modal" data-target="#modal-6">Оставить заявку</a>
 							<div class="text">+10% на Вашу карту за аренду <span class="ques">?</span></div>
 						</div>
 						<div class="action">
@@ -433,7 +433,7 @@
 								</li>
 								<li>
 									<img src="images/convert.png" height="15" width="20" alt="">
-									<a href="#">Отправить по почте</a>
+									<a href="#" class="send-post" data-toggle="modal" data-target="#modal-5">Отправить по почте</a>
 								</li>
 								<li>
 									<img src="images/print.png" height="18" width="20" alt="">
@@ -441,7 +441,7 @@
 								</li>
 								<li>
 									<img src="images/my-price.png" height="17" width="26" alt="">
-									<a href="#">Предложить свою цену</a>
+									<a href="#" data-toggle="modal" data-target="#modal-4">Предложить свою цену</a>
 								</li>
 							</ul>
 						</div>
@@ -503,7 +503,7 @@
 						<div class="more-info post">
 							<h4>дополнительная информация</h4>
 							<p>Аренда склада в Хлебниково - аренда склада класса "А" в 8 км от МКАД по Дмитровскому шоссе. В аренду предлагается складское помещение площадью 3 000 кв.м. Данная площадь располагает 5 воротами, оборудованными докшелтерами и доклевеллерами. Склад оснащен всеми необходимыми системами и комуникациями.</p>
-							<a href="#">Сообщить о неточности в описании</a>
+							<a href="#" class="report-error" data-toggle="modal" data-target="#modal-3">Сообщить о неточности в описании</a>
 						</div>
 						<div class="review post">
 							<div class="title clearfix">
@@ -615,7 +615,7 @@
 				<div class="more-info post">
 					<h4>дополнительная информация</h4>
 					<p>Аренда склада в Хлебниково - аренда склада класса "А" в 8 км от МКАД по Дмитровскому шоссе. В аренду предлагается складское помещение площадью 3 000 кв.м. Данная площадь располагает 5 воротами, оборудованными докшелтерами и доклевеллерами. Склад оснащен всеми необходимыми системами и комуникациями.</p>
-					<a href="#">Сообщить о неточности в описании</a>
+					<a href="#" data-toggle="modal" data-target="#modal-3">Сообщить о неточности в описании</a>
 				</div>
 				<div class="mobile-map-item">
 					<img src="images/map.jpg" height="364" width="490" alt="">
@@ -1080,6 +1080,212 @@
 			</div>
 		</div>
 	</footer>
+
+	<div class="modal fade" id="modal-1" tabindex="-1" role="dialog">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	        	<img src="images/close-menu.png" height="25" width="27" alt="">
+	        </button>
+	        <h4 class="modal-title">Заявка на подбор помещений</h4>
+	      </div>
+	      <div class="modal-body">
+	        <form action="">
+	        	<div class="modal-input-block">
+	        		<input type="text" placeholder="Ваше имя" class="main-input name-input">
+	        	</div>
+	        	<div class="modal-input-block">
+	        		<input type="text" placeholder="E-mail" class="main-input email-input">
+	        	</div>
+	        	<div class="modal-input-block">
+	        		<input type="text" placeholder="Телефон" class="main-input tel-input">
+	        	</div>
+	        	<div class="modal-input-block">
+	        		<input type="text" placeholder="Компания">
+	        	</div>
+	        	<div class="modal-input-block">
+	        		<textarea placeholder="Комментарий"></textarea>
+	        	</div>
+	        	<div class="modal-input-block clearfix">
+	        		<input type="submit" value="Оставить заявку" class="modal-submit">
+	        	</div>
+	        </form>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal modal-object fade" id="modal-2" tabindex="-1" role="dialog">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	        	<img src="images/close-menu.png" height="25" width="27" alt="">
+	        </button>
+	        <h4 class="modal-title">Прошу добавить мой объект на сайт</h4>
+	        <h6 class="small-modal-title">Объекты с качественными фотографиями и детальным описанием занимают первые позиции в поисковой выдаче </h6>
+	      </div>
+	      <div class="modal-map">
+	      	<img src="images/modal-map.jpg" height="246" width="421" alt="">
+	      </div>
+	      <div class="modal-body">
+	        <form action="">
+	        	<div class="modal-input-block">
+	        		<input type="text" placeholder="Ваше имя">
+	        	</div>
+	        	<div class="modal-input-block">
+	        		<input type="text" placeholder="E-mail">
+	        	</div>
+	        	<div class="modal-input-block">
+	        		<input type="text" placeholder="Телефон">
+	        	</div>
+	        	<div class="modal-input-block">
+	        		<textarea placeholder="Описание обьекта"></textarea>
+	        	</div>
+        		<div class="add-block">
+        			<img src="images/add-photo.png" height="22" width="26" alt="">
+        			<p>Перетащите фото сюда или</p>
+        			<a href="#">Загрузите вручную</a>
+        		</div>
+	        	<div class="modal-input-block clearfix">
+	        		<input type="submit" value="Добавить обьект" class="modal-submit">
+	        	</div>
+	        </form>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade" id="modal-3" tabindex="-1" role="dialog">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	        	<img src="images/close-menu.png" height="25" width="27" alt="">
+	        </button>
+	        <h4 class="modal-title">Что не так в описании обьекта?</h4>
+	      </div>
+	      <div class="modal-body">
+	        <form action="">
+	        	<div class="modal-input-block">
+	        		<textarea placeholder="Комментарий" class="main-text"></textarea>
+	        	</div>
+	        	<div class="modal-input-block">
+	        		<input type="text" placeholder="E-mail">
+	        	</div>
+	        	<div class="modal-input-block clearfix">
+	        		<input type="submit" value="Отправить" class="modal-submit">
+	        	</div>
+	        </form>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal modal-object fade" id="modal-4" tabindex="-1" role="dialog">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	        	<img src="images/close-menu.png" height="25" width="27" alt="">
+	        </button>
+	        <h4 class="modal-title">Предложите свою цену</h4>
+	        <h6 class="small-modal-title">Мы бесплатно проведем предварительные переговоры с собственником о возможности совершения сделки по вашей цене </h6>
+	      </div>
+	      <div class="modal-body">
+	        <form action="">
+	        	<div class="modal-input-block">
+	        		<input type="text" placeholder="Ваше имя">
+	        	</div>
+	        	<div class="modal-input-block">
+	        		<input type="text" placeholder="E-mail">
+	        	</div>
+	        	<div class="modal-input-block">
+	        		<input type="text" placeholder="Телефон">
+	        	</div>
+	        	<div class="modal-input-block">
+	        		<input type="text" placeholder="Компания">
+	        	</div>
+	        	<div class="modal-input-block">
+	        		<input type="text" placeholder="Ваша цена">
+	        	</div>
+	        	<div class="modal-input-block">
+	        		<textarea placeholder="Почему такая цена?"></textarea>
+	        	</div>
+	        	<div class="modal-input-block clearfix">
+	        		<input type="submit" value="Предложить цену" class="modal-submit">
+	        	</div>
+	        </form>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade" id="modal-5" tabindex="-1" role="dialog">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	        	<img src="images/close-menu.png" height="25" width="27" alt="">
+	        </button>
+	        <h4 class="modal-title">Отправьте объект другу</h4>
+	      </div>
+	      <div class="modal-body">
+	        <form action="">
+	        	<div class="modal-input-block">
+	        		<input type="text" placeholder="Ваш E-mail" class="main-input my-email">
+	        	</div>
+	        	<div class="modal-input-block">
+	        		<input type="text" placeholder="E-mail получателя" class="main-input your-email">
+	        	</div>
+	        	<div class="modal-input-block">
+	        		<textarea placeholder="Текст сообщения"></textarea>
+	        	</div>
+	        	<div class="modal-input-block clearfix">
+	        		<input type="submit" value="Отправить" class="modal-submit">
+	        	</div>
+	        </form>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade" id="modal-6" tabindex="-1" role="dialog">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	        	<img src="images/close-menu.png" height="25" width="27" alt="">
+	        </button>
+	        <h4 class="modal-title">Заявка на просмотр объекта </h4>
+	      </div>
+	      <div class="modal-body">
+	        <form action="">
+	        	<div class="modal-input-block">
+	        		<input type="text" placeholder="Ваше имя" class="main-input name-input">
+	        	</div>
+	        	<div class="modal-input-block">
+	        		<input type="text" placeholder="E-mail" class="main-input email-input">
+	        	</div>
+	        	<div class="modal-input-block">
+	        		<input type="text" placeholder="Телефон" class="main-input tel-input">
+	        	</div>
+	        	<div class="modal-input-block">
+	        		<input type="text" placeholder="Компания">
+	        	</div>
+	        	<div class="modal-input-block">
+	        		<textarea placeholder="Комментарий"></textarea>
+	        	</div>
+	        	<div class="modal-input-block clearfix">
+	        		<input type="submit" value="Оставить заявку" class="modal-submit">
+	        	</div>
+	        </form>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
 
 	<script src="js/vendor.min.js"></script>
 	<script>

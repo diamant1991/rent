@@ -264,7 +264,7 @@ ul.bxslider {
   width: 15px;
   height: 27px;
   text-indent: -9999px;
-  z-index: 9999;
+  z-index: 999;
   -webkit-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;

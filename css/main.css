@@ -1254,6 +1254,7 @@ img {
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
   outline: 0;
+  padding-right: 0 !important;
   background: rgba(85, 120, 151, 0.8);
 }
 .modal .close {
@@ -1265,6 +1266,12 @@ img {
   right: -45px;
   top: 0;
   cursor: pointer;
+}
+.fade {
+  -webkit-transition: opacity .15s linear;
+  -moz-transition: opacity .15s linear;
+  -o-transition: opacity .15s linear;
+  transition: opacity .15s linear;
 }
 .modal.fade .modal-dialog {
   -webkit-transition: -webkit-transform 0.3s ease-out;
@@ -1329,6 +1336,12 @@ img {
   line-height: 1.2;
   margin-bottom: 25px;
 }
+.small-modal-title {
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
 .modal-scrollbar-measure {
   position: absolute;
   top: -9999px;
@@ -1354,6 +1367,28 @@ img {
   outline: 0;
   -webkit-border-radius: 5px;
   border-radius: 5px;
+}
+.modal-input-block input[type="text"].main-input {
+  background-image: url(../images/red-star.png);
+  background-repeat: no-repeat;
+}
+.modal-input-block input[type="text"].main-input:focus {
+  background-image: none !important;
+}
+.modal-input-block input[type="text"].name-input {
+  background-position: 21% 8px;
+}
+.modal-input-block input[type="text"].email-input {
+  background-position: 15% 8px;
+}
+.modal-input-block input[type="text"].tel-input {
+  background-position: 19% 8px;
+}
+.modal-input-block input[type="text"].my-email {
+  background-position: 24% 8px;
+}
+.modal-input-block input[type="text"].your-email {
+  background-position: 36% 8px;
 }
 .modal-input-block input[type="text"]::-webkit-input-placeholder {
   color: #000;
@@ -1381,6 +1416,11 @@ img {
   -webkit-border-radius: 5px;
   border-radius: 5px;
   padding-top: 5px;
+}
+.modal-input-block textarea.main-text {
+  background-image: url(../images/red-star.png);
+  background-repeat: no-repeat;
+  background-position: 28% 9px;
 }
 .modal-input-block textarea::-webkit-input-placeholder {
   color: #000;
@@ -1600,4 +1640,33 @@ img {
   display: inline-block;
   vertical-align: top;
   position: relative;
+}
+.add-block {
+  text-align: center;
+  font-size: 14px;
+  background: #eff2f5;
+  padding: 15px 0;
+  margin-bottom: 10px;
+}
+.add-block a {
+  color: #42698c;
+}
+.add-block p {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.modal-object .modal-title {
+  padding: 0 40px;
+}
+.modal-object .small-modal-title {
+  padding: 0 25px;
+}
+.modal-object .modal-content {
+  padding: 40px 0;
+}
+.modal-object .modal-input-block {
+  padding: 0 40px;
+}
+.modal-map {
+  margin-bottom: 25px;
 }

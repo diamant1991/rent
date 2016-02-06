@@ -181,7 +181,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="#" class="add-object-link" data-toggle="modal" data-target="#modal-2">
 							<div class="table-block">
 								<div class="block-vertical"><img src="images/plus.png" height="16" width="16" alt="">
 									Добавить обьект</div>
@@ -955,13 +955,13 @@
 	      <div class="modal-body">
 	        <form action="">
 	        	<div class="modal-input-block">
-	        		<input type="text" placeholder="Ваше имя">
+	        		<input type="text" placeholder="Ваше имя" class="main-input name-input">
 	        	</div>
 	        	<div class="modal-input-block">
-	        		<input type="text" placeholder="E-mail">
+	        		<input type="text" placeholder="E-mail" class="main-input email-input">
 	        	</div>
 	        	<div class="modal-input-block">
-	        		<input type="text" placeholder="Телефон">
+	        		<input type="text" placeholder="Телефон" class="main-input tel-input">
 	        	</div>
 	        	<div class="modal-input-block">
 	        		<input type="text" placeholder="Компания">
@@ -971,6 +971,47 @@
 	        	</div>
 	        	<div class="modal-input-block clearfix">
 	        		<input type="submit" value="Оставить заявку" class="modal-submit">
+	        	</div>
+	        </form>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal modal-object fade" id="modal-2" tabindex="-1" role="dialog">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	        	<img src="images/close-menu.png" height="25" width="27" alt="">
+	        </button>
+	        <h4 class="modal-title">Прошу добавить мой объект на сайт</h4>
+	        <h6 class="small-modal-title">Объекты с качественными фотографиями и детальным описанием занимают первые позиции в поисковой выдаче </h6>
+	      </div>
+	      <div class="modal-map">
+	      	<img src="images/modal-map.jpg" height="246" width="421" alt="">
+	      </div>
+	      <div class="modal-body">
+	        <form action="">
+	        	<div class="modal-input-block">
+	        		<input type="text" placeholder="Ваше имя">
+	        	</div>
+	        	<div class="modal-input-block">
+	        		<input type="text" placeholder="E-mail">
+	        	</div>
+	        	<div class="modal-input-block">
+	        		<input type="text" placeholder="Телефон">
+	        	</div>
+	        	<div class="modal-input-block">
+	        		<textarea placeholder="Описание обьекта"></textarea>
+	        	</div>
+        		<div class="add-block">
+        			<img src="images/add-photo.png" height="22" width="26" alt="">
+        			<p>Перетащите фото сюда или</p>
+        			<a href="#">Загрузите вручную</a>
+        		</div>
+	        	<div class="modal-input-block clearfix">
+	        		<input type="submit" value="Добавить обьект" class="modal-submit">
 	        	</div>
 	        </form>
 	      </div>
