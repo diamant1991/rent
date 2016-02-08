@@ -373,4 +373,11 @@
 	.review-item .col-xs-4:last-child{
 		margin-bottom: 0;
 	}
+	.tooltip{
+		right: -30px;
+	}
+	.tooltip:after{
+		right: 25px;
+		left: auto;
+	}
 }
