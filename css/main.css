@@ -991,6 +991,7 @@ img {
 }
 .card-desc a {
   font-size: 14px;
+  outline: 0 !important;
 }
 .card-desc .discount {
   display: inline-block;
@@ -1031,8 +1032,12 @@ img {
   line-height: 15px;
   margin: 0 5px;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-.ques:hover + .tooltip {
+.ques.active + .tooltip {
   opacity: 1;
   visibility: visible;
   top: -115px;

@@ -97,3 +97,9 @@ $(function() {
 	});
 	
 });
+
+$(function() {
+	$('.ques').click(function(e) {
+		$(this).toggleClass('active');
+	});
+});
