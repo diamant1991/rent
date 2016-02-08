@@ -1070,6 +1070,7 @@ img {
 }
 .action a {
   color: #42698c;
+  outline: 0 !important;
 }
 .action a:hover {
   text-decoration: underline;
