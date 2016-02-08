@@ -63,6 +63,7 @@ img {
   color: #fff;
   background: #cc1e1f;
   font-size: 14px;
+  outline: 0 !important;
 }
 .top-item-img {
   height: 30px;
@@ -107,6 +108,7 @@ img {
   padding: 0 19px;
   height: 55px;
   color: #fff;
+  outline: 0 !important;
 }
 .nav-menu li a:hover {
   background: #36546e;
@@ -955,8 +957,9 @@ img {
   padding-right: 10px;
 }
 .thumb {
-  margin-top: 20px;
   margin-left: -8px;
+  display: inline-block;
+  vertical-align: middle;
 }
 .thumb a {
   display: inline-block;
@@ -1027,6 +1030,12 @@ img {
   text-align: center;
   line-height: 15px;
   margin: 0 5px;
+  cursor: pointer;
+}
+.ques:hover + .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: -115px;
 }
 .price-order {
   float: left;
@@ -1051,6 +1060,7 @@ img {
   font-size: 17px;
   margin-bottom: 12px;
   width: 95%;
+  outline: 0 !important;
 }
 .action {
   font-size: 14px;
@@ -1619,6 +1629,8 @@ img {
   height: 105px;
   line-height: 1.2;
   top: -145px;
+  color: #000000;
+  font-size: 14px;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all 0.3s ease-in-out;
@@ -1669,4 +1681,34 @@ img {
 }
 .modal-map {
   margin-bottom: 25px;
+}
+.pager-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+.pager-icon a {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  overflow: hidden;
+  width: 90px;
+  height: 67px;
+  margin-left: 8px;
+  margin-bottom: 8px;
+}
+.pager-icon a .overlay {
+  display: block;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  text-align: center;
+  background: rgba(66, 105, 140, 0.6);
+}
+.thumb-container {
+  margin: 20px 0;
 }

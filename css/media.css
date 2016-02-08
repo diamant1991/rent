@@ -166,6 +166,9 @@
 	.object-item{
 		width: 50%;
 	}
+	.modal-dialog{
+		margin: 50px auto;
+	}
 	.top-item-inner{
 		padding-left: 10px;
 		padding-right: 10px;
@@ -361,5 +364,13 @@
 	}
 	.modal-input-block textarea.main-text {
     background-position: 41% 9px;
+	}
+	.review-item .col-xs-4{
+		float: none;
+		width: 100%;
+		margin-bottom: 30px;
+	}
+	.review-item .col-xs-4:last-child{
+		margin-bottom: 0;
 	}
 }

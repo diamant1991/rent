@@ -84,7 +84,7 @@
 							</a>
 						</div>
 					</div>
-					<div class="top-item">
+					<!-- <div class="top-item">
 						<div class="top-item-inner">
 							<a href="#">
 								<div class="table-block">
@@ -103,7 +103,7 @@
 								</div>
 							</a>
 						</div>
-					</div>
+					</div> -->
 				</div>
 				<div class="telephone">
 					<div class="table-block">
@@ -128,7 +128,7 @@
 			</a>
 			<div class="telephone-nav">
 				<div class="tel">+7 903 192 09 89</div>
-				<a href="#" class="get-order-link">Оставить заявку</a>
+				<a href="#" class="get-order-link" data-toggle="modal" data-target="#modal-1">Оставить заявку</a>
 			</div>
 			<ul>
 				<li class="geo">
@@ -145,17 +145,17 @@
 					<a href="#">К сравнению</a>
 					<span class="label-number">5</span>
 				</li>
-				<li class="enter">
+				<!-- <li class="enter">
 					<img src="images/enter.png" height="23" width="16" alt="">
 					<a href="#">Вход</a>
-				</li>
+				</li> -->
 				<li>
 					<img src="images/sklad.png" height="19" width="19" alt="">
 					<a href="#">Склады</a>
 				</li>
 				<li>
 					<img src="images/plus-obj.png" height="19" width="19" alt="">
-					<a href="#">Добавить обьект</a>
+					<a href="#" data-toggle="modal" data-target="#modal-2">Добавить обьект</a>
 				</li>
 				<li>
 					<img src="images/spec-obj.png" height="19" width="22" alt="">
@@ -391,14 +391,39 @@
 							<img src="images/card-slider.jpg" height="368" width="497" alt="">
 						</li>
 					</ul>
-					<div id="bx-pager" class="thumb">
-					  <a data-slide-index="0" href="">
-					  	<img src="images/thumb.jpg" height="67" width="90" alt="">
-					  </a>
-					  <a data-slide-index="1" href="">
-					  	<img src="images/thumb.jpg" height="67" width="90" alt="">
-					  </a>
+					<div class="thumb-container">
+						<div id="bx-pager" class="thumb">
+						  <a data-slide-index="0" href="">
+						  	<img src="images/thumb.jpg" height="67" width="90" alt="">
+						  </a>
+						  <a data-slide-index="1" href="">
+						  	<img src="images/thumb.jpg" height="67" width="90" alt="">
+						  </a>
+						</div>
+						<div class="pager-icon">
+							<a href="#">
+								<div class="overlay">
+									<div class="table-block">
+										<div class="block-vertical">
+											<img src="images/play.png" height="37" width="37" alt="">
+										</div>
+									</div>
+								</div>
+								<img src="images/thumb.jpg" height="67" width="90" alt="">
+							</a>
+							<a href="#">
+								<div class="overlay">
+									<div class="table-block">
+										<div class="block-vertical">
+											<img src="images/layout.png" height="34" width="33" alt="">
+										</div>
+									</div>
+								</div>
+								<img src="images/plan.png" height="67" width="90" alt="">
+							</a>
+						</div>
 					</div>
+
 					<div class="map-item">
 						<img src="images/map.jpg" height="364" width="490" alt="">
 					</div>
@@ -412,10 +437,27 @@
 							</div>
 							<div class="prev">6 400 руб./в.м./год.</div>
 							<div class="text">
-								ОПЕКС <span class="ques">?</span>включен в стоимость НДС оплачивается отдельно
+								<div>
+									ОПЕКС 
+									<div class="tooltip-item">
+										<span class="ques">?</span>
+										<div class="tooltip">
+											Допустимая нагрузка зависит от материалов использованных при строительстве, этажности и других факторов.
+										</div>
+									</div>
+									включен в стоимость
+								</div>
+							 <div>НДС оплачивается отдельно</div>
 							</div>
 							<a href="#" class="get-order" data-toggle="modal" data-target="#modal-6">Оставить заявку</a>
-							<div class="text">+10% на Вашу карту за аренду <span class="ques">?</span></div>
+							<div class="text">+10% на Вашу карту за аренду 
+							<div class="tooltip-item">
+								<span class="ques">?</span>
+								<div class="tooltip">
+									Допустимая нагрузка зависит от материалов использованных при строительстве, этажности и других факторов.
+								</div>
+							</div>
+							</div>
 						</div>
 						<div class="action">
 							<ul>
@@ -1164,7 +1206,7 @@
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 	        	<img src="images/close-menu.png" height="25" width="27" alt="">
 	        </button>
-	        <h4 class="modal-title">Что не так в описании обьекта?</h4>
+	        <h4 class="modal-title">Что не так в описании объекта?</h4>
 	      </div>
 	      <div class="modal-body">
 	        <form action="">

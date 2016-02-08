@@ -63,6 +63,7 @@ table {
 }
 input[type="submit"],
 input[type="button"],
+input[type="search"],
 button{
 	-webkit-appearance: none;
 }
