@@ -107,15 +107,18 @@ $(function() {
 	});
 });
 
-
 $(function() {
 	$('.ques').click(function(e) {
-		if(!$(this).hasClass('active')){
-			$(this).addClass('active')
+		var div = $(this).next();
+		if(div.is(':hidden')){
+			div.fadeIn(300);
+			div.addClass("active");
 		}
 		else{
-			$(this).removeClass('active');
+			div.fadeOut(300);
+			div.removeClass("active");
 		}
+		return false;
 	});
 });
 
@@ -123,8 +126,8 @@ $(function() {
 	$(document).mouseup(function (e){ 
 		var div = $(".tooltip");
 		if (!div.is(e.target) && div.has(e.target).length === 0) {
-			div.removeClass('active');
-			$('.ques').removeClass('active');
+			div.fadeOut(300);
+			div.removeClass("active");
 		}
 	});
 });

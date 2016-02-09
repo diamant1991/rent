@@ -1131,6 +1131,15 @@ img {
   background: url(../images/i.png) no-repeat;
   margin-left: 5px;
 }
+.information + .tooltip {
+  opacity: 0;
+  display: block !important;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
 .information:hover + .tooltip {
   opacity: 1;
   visibility: visible;
@@ -1637,12 +1646,16 @@ img {
   top: -145px;
   color: #000000;
   font-size: 14px;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  /* opacity: 0;
+	visibility: hidden; */
+  display: none;
+  -webkit-transition: top 0.3s ease-in-out;
+  -moz-transition: top 0.3s ease-in-out;
+  -o-transition: top 0.3s ease-in-out;
+  transition: top 0.3s ease-in-out;
+}
+.tooltip.active {
+  top: -115px;
 }
 .tooltip:after {
   content: "";
