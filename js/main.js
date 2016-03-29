@@ -131,3 +131,35 @@ $(function() {
 		}
 	});
 });
+
+$(function() {
+	 $(document).on('click', ".compare__right",function(){ 
+	   var compare_carusel = $(this).parents('.compare__carousel');
+	   compare_right_carusel(compare_carusel); 
+	   return false;
+	});
+
+	$(document).on('click',".compare__left",function(){ 
+	   var compare_carusel = $(this).parents('.compare__carousel');
+	   compare_left_carusel(compare_carusel);
+	   return false;
+	});
+	function compare_left_carusel(compare_carusel){
+	   var block_width = $(compare_carusel).find('.noleft-border').outerWidth();
+	   $(compare_carusel).children('.compare__wrapper').animate({scrollLeft: "-="+block_width+"px"}, 200); ; 
+	   
+	}
+	function compare_right_carusel(compare_carusel){
+	   var block_width = $(compare_carusel).find('.noleft-border').outerWidth();
+	   $(compare_carusel).children('.compare__wrapper').animate({scrollLeft: "+="+block_width+"px"}, 200); 
+	}
+
+	$(function() {
+	   $('.compare__carousel').each(function(){
+	      $(this).find('.compare__items').html('<span style="display:inline-block;">'+$(this).find('.compare__items').html()+'</span>');
+	      var cw = $(this).find('.compare__items').children('span').width();
+	      $(this).find('.compare__items').width(cw);
+	   })
+ 
+	})
+});
