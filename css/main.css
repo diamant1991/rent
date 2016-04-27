@@ -1332,6 +1332,7 @@ img {
 }
 .big-map {
   margin: 20px 0;
+  position: relative;
 }
 .modal-open {
   overflow: hidden;
@@ -1899,4 +1900,100 @@ img {
 }
 .city-list a:hover {
   text-decoration: underline;
+}
+.map-label {
+  position: absolute;
+  z-index: 2;
+  right: 45%;
+  top: 200px;
+}
+.map-label__text {
+  position: absolute;
+  top: -170px;
+  left: -20px;
+  z-index: 3;
+  width: 410px;
+  height: 170px;
+  padding: 2px;
+  background: #fff;
+  -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.23);
+  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.23);
+}
+.map-label__text:after {
+  content: "";
+  background: url(../images/arrow-label.png) no-repeat;
+  width: 15px;
+  height: 10px;
+  position: absolute;
+  z-index: 2;
+  bottom: -8px;
+  left: 30px;
+}
+.map-label__img {
+  height: 166px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 160px;
+  float: left;
+}
+.map-label__descr {
+  float: left;
+  width: 245px;
+  padding: 0 21px;
+  height: 166px;
+  line-height: 1.2;
+}
+.map-label__title {
+  font-size: 16px;
+  color: #42698c;
+  font-family: 'PtSansBold';
+  margin-bottom: 10px;
+}
+.map-label__sale {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 11px;
+  color: #cc1e1f;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background: #eff2f5;
+  height: 20px;
+  line-height: 20px;
+  padding: 0 5px;
+}
+.map-label__today-price {
+  margin-bottom: 5px;
+}
+.map-label__prev-price {
+  text-decoration: line-through;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+.map-label__more {
+  display: block;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background: #42698c;
+  font-size: 14px;
+}
+.map-label__close {
+  position: absolute;
+  z-index: 2;
+  right: 5px;
+  top: 5px;
+}
+.today-price__info {
+  font-size: 16px;
+  color: #cc1e1f;
+  font-family: 'PtSansBold';
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
 }
