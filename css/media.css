@@ -161,23 +161,7 @@
 		width: 47%;
 	}
 }
-
-@media(max-width: 767px){
-	.object-item{
-		width: 50%;
-	}
-	.modal-dialog{
-		margin: 50px auto;
-	}
-	.top-item-inner{
-		padding-left: 10px;
-		padding-right: 10px;
-	}
-	.more-text-block:before{
-		top: -60px;
-	}
-}
-@media(min-width: 601px){
+@media(min-width: 768px){
 	.mobile-btn,
 	.mobile-filter,
 	.mobile-nav-wrapp .geo,
@@ -188,11 +172,73 @@
 		display: none !important;
 	}
 }
-@media(max-width: 600px){
-	.result-filter a{
+@media(max-width: 767px){
+	.object-item{
+		width: 50%;
+	}
+	.modal-dialog{
+		margin: 50px auto;
+	}
+	.catalog-dropdown > li > ul{
+		width: 100%;
+		right: 0;
+	}
+	.add-btn_order,
+	.add-btn_search{
 		display: block;
-		margin-bottom: 10px;
-		margin-right: 0;
+		margin: auto;
+		margin-bottom: 20px;
+	}
+	.help__item{
+		width: 100%;
+		padding: 0;
+		display: block;
+	}
+	.header-text{
+		border-bottom: 0;
+	}
+	.top-item-inner{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.more-text-block:before{
+		top: -60px;
+	}
+	.mobile-nav-wrapp{
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.menu-icon{
+		margin-left: 35px;
+	}
+	.telephone-nav .tel{
+		padding-left: 35px;
+	}
+	.mobile-nav-wrapp{
+		height: 90%;
+	}
+	.catalog-dropdown{
+		width: 100%;
+		margin-left: 0;
+	}
+	.top-item,
+	.tablet-btn,
+	.telephone{
+		display: none;
+	}
+	.close-menu{
+		display: none !important;
+	}
+	.search,
+	.nav-wrapp{
+		padding-left: 0;
+	}
+	.main-header-wrapp{
+		padding-right: 0;
+	}
+	.desktop-filter{
+		display: none;
 	}
 	a.get-order-link{
 		width: 170px;
@@ -202,28 +248,15 @@
 		font-size: 17px;
 		margin-bottom: 30px;
 		display: block;
+		margin-left: 35px;
 		text-decoration: none !important;
 	}
-	.mobile-nav-wrapp{
-		width: 100%;
-	}
-	.mobile-nav-wrapp{
-		height: 90%;
-	}
-	.close-menu{
-		display: none !important;
-	}
-	.top-item,
-	.tablet-btn,
-	.telephone{
-		display: none;
-	}
-	.search,
-	.nav-wrapp{
-		padding-left: 0;
-	}
-	.main-header-wrapp{
-		padding-right: 0;
+}
+@media(max-width: 600px){
+	.result-filter a{
+		display: block;
+		margin-bottom: 10px;
+		margin-right: 0;
 	}
 	.sorting .left-sort,
 	.sorting .right-sort{
@@ -276,9 +309,6 @@
 	}
 	.main-header{
 		overflow: hidden;
-	}
-	.desktop-filter{
-		display: none;
 	}
 	.card-slider{
 		width: 100%;
