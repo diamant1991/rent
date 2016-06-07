@@ -136,7 +136,8 @@ $(function() {
 		e.preventDefault();
 		var catMenu = $('.catalog-drop-toogle + ul');
 		catMenu.fadeOut(400);
-		$(this).fadeOut(400)
+		$(this).fadeOut(400);
+		$('.mobile-nav').css('z-index', '10000');
 	});
 });	
 

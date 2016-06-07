@@ -183,6 +183,28 @@
 		width: 100%;
 		right: 0;
 	}
+	.city-left{
+		float: none;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.modal-dialog-city{
+		width: 75%;
+	}
+	.modal-dialog-city .modal-content{
+		padding: 0;
+		padding-top: 85px;
+		padding-bottom: 30px;
+	}
+	.city-center{
+		float: none;
+		padding: 0 25px;
+		width: 100%;
+	}
+	.city-center li{
+		float: none;
+		width: 100%;
+	}
 	.add-btn_order,
 	.add-btn_search{
 		display: block;
@@ -376,6 +398,12 @@
 	}
 	.modal-dialog{
 		width: 315px;
+	}
+	.hidden-450{
+		display: none;
+	}
+	.renters__item{
+		width: 50%;
 	}
 	.modal-input-block input[type="text"].name-input {
     background-position: 31% 8px;
