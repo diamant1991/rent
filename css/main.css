@@ -1934,8 +1934,54 @@ img {
   color: #000;
   margin-bottom: 20px;
 }
+.compare-del {
+  display: inline-block;
+  vertical-align: middle;
+  color: #42698c !important;
+  font-size: 14px;
+}
+.compare-get-order {
+  display: inline-block;
+  vertical-align: middle;
+  width: 125px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  background: #cc1e1f;
+  color: #fff !important;
+  text-align: center;
+  margin-right: 20px;
+}
 .compare {
   position: relative;
+}
+.compare ul {
+  text-align: left;
+}
+.compare__column {
+  width: 235px;
+  margin: auto;
+  text-align: left;
+}
+.compare__title {
+  height: 65px;
+  font-size: 16px;
+  font-family: 'PtSansBold';
+  color: #42698c;
+}
+.compare__img {
+  height: 175px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.compare p {
+  font-size: 14px;
+  margin-bottom: 15px;
 }
 .compare__carousel {
   margin: 15px auto;
@@ -1972,31 +2018,71 @@ img {
   margin: 10px 0;
   overflow: hidden;
   position: relative;
-  padding-left: 100px;
+  padding-left: 230px;
+  overflow-x: auto;
 }
 .compare__items {
   width: 10000px;
   position: relative;
 }
+.compare__header {
+  background: #eff2f5;
+  padding: 13px 25px;
+  font-size: 13px;
+  margin-top: 30px;
+}
+.compare__header a {
+  color: #42698c;
+}
+.compare__header .left-block {
+  float: left;
+}
+.compare__header .right-block {
+  float: right;
+}
+.compare__header .view-all {
+  margin-left: 30px;
+}
+.print-icon {
+  background: url(../images/print-small.png) no-repeat;
+  width: 14px;
+  height: 13px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 3px;
+}
+.compare-content {
+  position: relative;
+}
 .comparelist {
   float: left;
+  font-size: 14px;
+  text-align: left;
 }
 .comparelist.noleft-border td {
   border-left: 0;
 }
+.comparelist tr:nth-child(2n) .compare__item {
+  background: #eff2f5;
+}
 .comparelist tr td {
-  width: 178px;
-  height: 80px;
+  width: 255px;
+  height: 45px;
+}
+.comparelist tr td .compare__item {
+  height: 45px;
+  padding: 15px;
+}
+.comparelist tr td .compare__item.list-block {
+  height: auto;
 }
 .comparelist tr td img {
   width: 100%;
   height: auto;
 }
 .comparelist td {
-  padding: 10px;
-  border: 1px solid #333;
-  text-align: center;
-  vertical-align: middle;
+  padding: 0 1px;
+  vertical-align: top;
 }
 .comparelist td a {
   color: #333;
@@ -2008,11 +2094,11 @@ img {
   left: 0;
   top: 38px;
   background: #fff;
-  width: 100px;
+  width: 230px;
 }
 .comparetitle tr td {
-  width: 100px;
-  height: 80px;
+  width: 230px;
+  height: 45px;
 }
 .city-left {
   float: left;
@@ -2343,4 +2429,182 @@ img {
 }
 .object-likes__link a {
   margin: 0 3px;
+}
+.object-top {
+  position: relative;
+}
+.search-tenants h2 {
+  text-align: center;
+}
+.search-tenants__wrapper {
+  height: 190px;
+  background: url(../images/search-bg.jpg) no-repeat 50%;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-top: 30px;
+}
+.search-tenants__form {
+  height: 190px;
+}
+.search-tenants__input {
+  display: block;
+  height: 70px;
+  background-color: #fff;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  outline: 0;
+  border: 0;
+  font-size: 26px;
+  font-family: 'PtSans';
+  width: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
+  float: left;
+  width: 67%;
+}
+.search-tenants__submit {
+  display: block;
+  float: right;
+  width: 30%;
+  height: 70px;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  padding-left: 30px;
+  background: #cc1e1f url(../images/search-tenants.png) no-repeat 30% 22px;
+  font-size: 30px;
+  font-family: 'PtSansBold';
+  color: #fff;
+  text-transform: uppercase;
+}
+.tenants-list__item {
+  float: left;
+  width: 25%;
+  padding-left: 25px;
+  text-align: center;
+  padding-bottom: 50px;
+}
+.tenants-list__item:nth-child(4n+1) {
+  clear: both;
+}
+.tenants-list__name {
+  font-family: 'PtSansBold';
+  color: #42698c;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.tenants-list__text {
+  font-size: 16px;
+  color: #666666;
+  line-height: 1.2;
+}
+.tenants-list__img {
+  position: relative;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  height: 220px;
+  background: #f8f8f8;
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+.tenants-list__img:hover .tenants-list__more {
+  opacity: 1;
+  visibility: visible;
+}
+.tenants-list__more {
+  position: absolute;
+  z-index: 2;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  height: 220px;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background: rgba(204, 30, 31, 0.9);
+  width: 100%;
+}
+.tenants-more {
+  display: block;
+  color: #fff;
+  width: 130px;
+  height: 40px;
+  text-transform: uppercase;
+  line-height: 36px;
+  font-size: 18px;
+  font-family: 'PtSansBold';
+  margin: auto;
+  border: 2px solid #fff;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.tenants-list-content {
+  margin-left: -25px;
+  padding-top: 30px;
+}
+.page-list {
+  text-align: center;
+  font-family: 'PtSansBold';
+  margin-bottom: 60px;
+}
+.page-list a {
+  display: inline-block;
+  vertical-align: middle;
+  width: 35px;
+  height: 35px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  line-height: 35px;
+  font-size: 20px;
+  color: #656565;
+  margin: 0 10px;
+  background: #ebebeb;
+}
+.page-list a:hover {
+  background: #cc1e1f;
+  color: #fff;
+}
+.single-tenants {
+  position: relative;
+  padding-left: 325px;
+  line-height: 1.3;
+  font-size: 18px;
+  margin-top: 50px;
+  border-bottom: 1px solid #b2b2b2;
+  padding-bottom: 10px;
+  margin-bottom: 35px;
+}
+.single-tenants__img {
+  position: absolute;
+  z-index: 2;
+  left: 40px;
+  top: 0;
+  width: 260px;
+  height: 260px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  text-align: center;
+  background: #f9f9f9;
+}
+.single-tenants__title {
+  font-size: 24px;
+  font-family: 'PtSansBold';
+}
+.single-tenants .small-title {
+  font-size: 16px;
+  color: #666666;
+  margin-bottom: 25px;
+}
+.single-tenants p {
+  margin-top: 25px;
+}
+.arends__title {
+  font-size: 24px;
+  font-family: 'PtSansBold';
+  margin-bottom: 10px;
 }
