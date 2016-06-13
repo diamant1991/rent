@@ -209,6 +209,30 @@
 		margin-bottom: 25px;
 		left: 0;
 	}
+	.compare__btn{
+		display: none;
+	}
+	.comparetitle{
+		width: 120px;
+	}
+	.compare__header .left-block{
+		float: none;
+		margin-bottom: 15px;
+		text-align: center;
+	}
+	.compare__header .right-block{
+		float: none;
+		text-align: center;
+	}
+	.comparetitle tr td .compare__item{
+		padding: 0 15px;
+	}
+	.comparetitle tr td .list-block{
+		padding: 15px;
+	}
+	.compare-view{
+		padding-left: 120px;
+	}
 	.search-tenants__input{
 		width: 100%;
 		float: none;
