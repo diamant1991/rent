@@ -2676,3 +2676,25 @@ img {
   border-radius: 5px;
   background: #cc1e1f;
 }
+.back-btn {
+  float: right;
+  height: 27px;
+  display: block;
+  width: 80px;
+  font-size: 13px;
+  color: #42698c;
+  background: #eff2f5;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 27px;
+  position: relative;
+  top: -5px;
+}
+.adress-item {
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+.adress-item span {
+  color: #a0b2c3;
+}

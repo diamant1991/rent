@@ -191,6 +191,10 @@
 	.object-item{
 		width: 50%;
 	}
+	.back-btn{
+		float: none;
+		margin-top: 20px;
+	}
 	.modal-dialog{
 		margin: 50px auto;
 	}
