@@ -168,6 +168,13 @@ $(function() {
 });
 
 $(function() {
+	$('.rent-info__close').click(function(e) {
+		e.preventDefault();
+		$(this).closest('.rent-info').fadeOut(200);
+	});
+});
+
+$(function() {
 	$(document).mouseup(function (e){ 
 		var div = $(".tooltip");
 		if (!div.is(e.target) && div.has(e.target).length === 0) {
@@ -235,35 +242,23 @@ $(function() {
 	});
 });
 
-// $(function() {
-// 	$('.add-favorites').click(function(e){
-// 		e.preventDefault()
-// 		img = $(this).closest('.object-item').find('.object-img');
-//     $(img)
-//       .clone()
-//       .css({'position' : 'absolute', 'z-index' : '11100','width' : '235px', 'height': '175px', top: $(this).offset().top-300, left:$(this).offset().left-100})
-//       .appendTo("body")
-//       .animate({opacity: 0.05,
-//           left: $(".favorites-text").offset()['left'],
-//           top: $(".favorites-text").offset()['top'],
-//           width: 150}, 1000, function() {
-//           $(this).remove();
-//       });
-// 	})
-// });
-
-function addfav(id) {
-	var url = '/ajax/fav.php?id='+id;
-	$.post(url).done(function(data){
-		$('.add-fav-link').html('Добавлен в избранное');
-		$('.add-fav-link').removeAttr('href');
-		$('.add-fav-link').addClass('nolink');
-		//var favcount = parseInt($('.favnum').text())+1;
-		var favcount = Number($('.favnum').attr('count'))+1;
-		$('.favnum').attr('count',favcount);
-		$('.favnum').text(favcount);
+$(function() {
+	$('.add-favorites').click(function(e){
+		e.preventDefault()
+		img = $(this).closest('.object-item').find('.object-img');
+    $(img)
+      .clone()
+      .css({'position' : 'absolute', 'z-index' : '11100','width' : '235px', 'height': '175px', top: $(this).offset().top-300, left:$(this).offset().left-100})
+      .appendTo("body")
+      .animate({opacity: 0.05,
+          left: $(".favorites-text").offset()['left'],
+          top: $(".favorites-text").offset()['top'],
+          width: 150}, 1000, function() {
+          $(this).remove();
+      });
 	})
-}
+});
+
 
 $(document).ready(function () {
 	$.fn.equivalent = function (){
