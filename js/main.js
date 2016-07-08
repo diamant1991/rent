@@ -272,3 +272,28 @@ $(document).ready(function () {
 	}
 	$('.list-block').equivalent();
 });
+
+$(document).ready(function() {
+	var navPos, winPos, blockPos;
+	  
+	function refreshVar() {
+	  navPos = $('.fixed-block').offset().top;
+	}
+
+	refreshVar();
+	$(window).resize(refreshVar);
+
+	$(window).scroll(function() {
+	  winPos = $(window).scrollTop();
+	  blockPos = winPos - navPos;
+
+	  if (winPos >= navPos) {
+	    $('.fixed-block').addClass('absolute'); 
+	    $('.fixed-block').css('top', blockPos + 'px');
+	  }  
+	  else {
+	    $('.fixed-block').removeClass('absolute');
+	  }
+	});
+
+});

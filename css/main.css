@@ -2001,8 +2001,9 @@ img {
   text-align: left;
 }
 .compare__column {
-  width: 235px;
+  width: 255px;
   margin: auto;
+  padding: 0 10px;
   text-align: left;
 }
 .compare__title {
@@ -2040,6 +2041,7 @@ img {
   width: 28px;
   background: #eff2f5 url(../images/pag-prev.png) no-repeat 50%;
   display: none;
+  z-index: 3;
 }
 .compare__left:hover {
   background: #cc1e1f url(../images/pag-prev-active.png) no-repeat 50%;
@@ -2047,7 +2049,7 @@ img {
 .compare__right {
   display: block;
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   right: 0;
   top: 30px;
   height: 175px;
@@ -2100,11 +2102,12 @@ img {
   float: left;
   font-size: 14px;
   text-align: left;
+  background: #fff;
 }
 .comparelist.noleft-border td {
   border-left: 0;
 }
-.comparelist tr:nth-child(2n) .compare__item {
+.comparelist tr:nth-child(odd) .compare__item {
   background: #eff2f5;
 }
 .comparelist tr td {
@@ -2139,6 +2142,10 @@ img {
   left: 0;
   top: 30px;
   background: #fff;
+  width: 230px;
+  overflow: hidden;
+}
+.comparetitle .fixed-block {
   width: 230px;
 }
 .comparetitle tr td {
@@ -2726,4 +2733,12 @@ img {
   z-index: 2;
   right: 10px;
   top: 5px;
+}
+.fixed-block {
+  height: 295px;
+  background: #fff;
+}
+.fixed-block.absolute {
+  position: absolute;
+  z-index: 2;
 }
